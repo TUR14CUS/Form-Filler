@@ -1,47 +1,54 @@
 # Selenium Form Filler
 
-This Python script utilizes Selenium to automate the process of filling a web form with data from a CSV file. The script prompts the user for input, including the path to the ChromeDriver executable, the URL of the form, the path to the data file in CSV format, and the XPath of the Submit button.
+This Python script automates the process of filling a web form using Selenium. The script provides two options for the user: filling the form with existing data or generating fake data and then filling the form.
 
 ## Prerequisites
 
-- **ChromeDriver:** Ensure you have ChromeDriver installed. You can download it from [here](https://sites.google.com/chromium.org/driver/).
+- **Python**: Ensure you have Python installed. You can download it from [python.org](https://www.python.org/).
 
-- **Python Libraries:** Make sure you have the necessary Python libraries installed. You can install them using the following:
+- **ChromeDriver**: Download the ChromeDriver executable compatible with your Chrome browser version. You can find it [here](https://sites.google.com/chromium.org/driver/).
+
+- **Dependencies**: Install the required Python packages using the following command:
 
   ```bash
-  pip install selenium pandas
+  pip install selenium pandas faker
   ```
 
-## How to Use
+## Usage
 
 1. **Run the Script:**
-   - Execute the script by running the Python file in your terminal or preferred Python environment:
 
-     ```bash
-     python form_filler.py
-     ```
+   Open a terminal and run the script by executing the following command:
 
-2. **Provide Inputs:**
-   - Enter the requested information, including the path to the ChromeDriver executable, the URL of the form, the path to the CSV file containing the data, and the XPath of the Submit button.
+   ```bash
+   python form_filler.py
+   ```
 
-3. **Automation:**
-   - The script will launch a headless Chrome browser, read the data from the CSV file, and automate the process of filling the form on the provided website.
+2. **Choose an Option:**
 
-4. **Completion:**
-   - Once the script completes or encounters an error, the Chrome browser will be closed, and the script will display relevant messages.
+   The script will prompt you to choose an option:
+   - Option 1: Fill the form with existing data from a CSV file.
+   - Option 2: Generate fake data, fill the form, and save it to a CSV file.
 
-## Notes
+3. **Provide Input:**
 
-- **Error Handling:**
-  - The script includes basic error handling to catch and display any exceptions that might occur during execution.
+   - If you chose Option 1, enter the path to the existing CSV file containing the data.
+   - If you chose Option 2, provide the number of fake data entries to generate and the column name for comments.
 
-- **Customization:**
-  - You can customize the script by modifying variables such as `CHROME_DRIVER_PATH`, `FORM_WEBSITE`, `DATA_FILE_PATH`, and `SUBMIT_BUTTON_XPATH` based on your specific use case.
+4. **Enter Details:**
 
-- **WebDriver Setup:**
-  - Ensure that the version of ChromeDriver matches your Chrome browser version.
+   Input the path to the ChromeDriver executable, the URL of the form, and the XPath of the Submit button.
 
-- **CSV Data Format:**
-  - The script assumes that the data in the CSV file is organized with columns representing form fields and rows containing the corresponding data.
+5. **Automated Form Filling:**
 
-Feel free to adapt and modify the script according to your requirements!
+   The script will launch a Chrome browser, open the specified form, and fill it with the provided data.
+
+## Important Notes
+
+- Ensure that you have a stable internet connection and that the form elements are accessible using the provided XPath.
+
+- If the form has additional or different fields, adjust the script accordingly.
+
+- The script will print the columns of the data frame for your reference.
+
+Feel free to modify the script to suit your specific requirements!
