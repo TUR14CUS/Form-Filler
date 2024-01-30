@@ -2,6 +2,12 @@
 
 This Python script automates the process of filling a web form using Selenium. The script provides two options for the user: filling the form with existing data or generating fake data and then filling the form.
 
+## Table of Contents
+1. [Prerequisites](#prerequisites)
+2. [Usage](#usage)
+3. [Important Notes](#important-notes)
+4. [License](#license)
+
 ## Prerequisites
 
 - **Python**: Ensure you have Python installed. You can download it from [python.org](https://www.python.org/).
@@ -51,4 +57,5 @@ This Python script automates the process of filling a web form using Selenium. T
 
 - The script will print the columns of the data frame for your reference.
 
-Feel free to modify the script to suit your specific requirements!
+## License
+This project is licensed under the [MIT License](LICENSE).
